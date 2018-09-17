@@ -1,0 +1,8 @@
+project: dino-park
+desc: All the dinos are here.
+discover:
+  - ../dino-cave
+  - ../dino-tree
+  - ../dino-park-front-end
+  - ../iam-profile-faker
+  - ../dino-park-profile-publisher
