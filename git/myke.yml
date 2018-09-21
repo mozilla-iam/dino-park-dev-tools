@@ -1,0 +1,11 @@
+project: git
+desc: clone all the repos
+tasks:
+  checkout:
+    cmd: |-
+      cd ../..
+      co.sh dino-cave fiji-flo
+      co.sh dino-tree
+      co.sh dino-park-front-end
+      co.sh iam-profile-faker
+      co.sh dino-park-profile-publisher
