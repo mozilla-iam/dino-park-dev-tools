@@ -10,16 +10,15 @@ Some helper tools for DinoPark development.
 In order to bootstrap and run a local instance of DinoPark we need a local kubernetes cluster.
 The easiest way to achieve this using [minikube](https://github.com/kubernetes/minikube).
 
-Make sure we enable the ingress addon:
-```
-$ minikube addons enable ingress
-```
-
-Now we can start a cluster via:
+We can start a cluster via:
 ```
 $ minikube start
 ```
 
+Make sure we enable the ingress addon:
+```
+$ minikube addons enable ingress
+```
 To stop it again run:
 ```
 $ minikube stop
@@ -67,7 +66,7 @@ $ git clone  https://github.com/mozilla-iam/dino-park-dev-tools.git
 $ cd dino-park-dev-tools
 
 # This will clone all DinoPark repositories to the parent directory for dino-park-dev-tools if they don't exist
-$ myke git/checkout 
+$ myke git/checkout
 
 # Build all services
 $ myke package
@@ -83,4 +82,3 @@ $ kubectl get pods -ndino-park
 ```
 
 The front-end will be served on [http://dinopark.mozilla.community](http://dinopark.mozilla.community).
-
