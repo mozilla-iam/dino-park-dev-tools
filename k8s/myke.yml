@@ -1,0 +1,15 @@
+project: k8s
+desc: manage the k8s cluster dev setup
+tasks:
+  create-ec2:
+    cmd: |-
+      aws ec2 run-instances \
+      --image-id `latest_ami.sh` \
+      --count 1 \
+      --instance-type t3.medium \
+      --key-name  {{ .USERNAME }} \
+      --security-group-ids sg-0b772c3bf46483896 \
+      --subnet-id subnet-014e6c3806f034819 \
+      --associate-public-ip-address \
+      --tag-specification 'ResourceType=instance,Tags=[{Key=Name,Value=dino-park-dev-{{ .USERNAME }}}]' \
+      --user-data file://data/minikube_ec2.sh

@@ -7,3 +7,4 @@ discover:
   - ../iam-profile-faker
   - ../dino-park-profile-publisher
   - ./git
+  - ./k8s
