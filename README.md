@@ -10,14 +10,16 @@ Some helper tools for DinoPark development.
 In order to bootstrap and run a local instance of DinoPark we need a local kubernetes cluster.
 The easiest way to achieve this using [minikube](https://github.com/kubernetes/minikube).
 
-Make sure we enable the ingress addon:
-```
-$ minikube addons enable ingress
-```
+We most likely need [VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed.
 
 Now we can start a cluster via:
 ```
 $ minikube start
+```
+
+Make sure we enable the ingress addon:
+```
+$ minikube addons enable ingress
 ```
 
 To stop it again run:
@@ -83,4 +85,3 @@ $ kubectl get pods -ndino-park
 ```
 
 The front-end will be served on [http://dinopark.mozilla.community](http://dinopark.mozilla.community).
-
