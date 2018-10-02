@@ -1,6 +1,7 @@
 project: dino-park
 desc: All the dinos are here.
 discover:
+  - ./external
   - ../dino-cave
   - ../dino-tree
   - ../dino-park-front-end
