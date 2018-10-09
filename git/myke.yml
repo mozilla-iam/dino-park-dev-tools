@@ -9,3 +9,4 @@ tasks:
       co.sh dino-park-front-end
       co.sh iam-profile-faker
       co.sh dino-park-profile-publisher
+      co.sh mozillians mozilla

@@ -7,5 +7,6 @@ discover:
   - ../dino-park-front-end
   - ../iam-profile-faker
   - ../dino-park-profile-publisher
+  - ../mozillians
   - ./git
   - ./k8s
