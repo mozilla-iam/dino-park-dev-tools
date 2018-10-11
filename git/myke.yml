@@ -10,3 +10,12 @@ tasks:
       co.sh iam-profile-faker
       co.sh dino-park-profile-publisher
       co.sh mozillians mozilla
+  update:
+    cmd: |-
+      cd ../..
+      update.sh dino-cave fiji-flo
+      update.sh dino-tree
+      update.sh dino-park-front-end
+      update.sh iam-profile-faker
+      update.sh dino-park-profile-publisher
+      update.sh mozillians mozilla
