@@ -1,4 +1,5 @@
 ---
+{{ if eq .Values.env "dev" }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -16,3 +17,4 @@ spec:
       port: 9300
       targetPort: 9300
       name: nodes
+{{ end }}

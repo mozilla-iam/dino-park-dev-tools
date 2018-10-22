@@ -13,3 +13,6 @@ tasks:
       --associate-public-ip-address \
       --tag-specification 'ResourceType=instance,Tags=[{Key=Name,Value=dino-park-dev-{{ .USERNAME }}}]' \
       --user-data file://data/minikube_ec2.sh
+
+  run-dev:
+    cmd: helm template -f values.yaml . | kubectl apply -f -

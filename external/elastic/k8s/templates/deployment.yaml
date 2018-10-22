@@ -1,4 +1,5 @@
 ---
+{{ if eq .Values.env "dev" }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -26,3 +27,4 @@ spec:
           env:
             - name: discovery.type
               value: single-node
+{{ end }}
