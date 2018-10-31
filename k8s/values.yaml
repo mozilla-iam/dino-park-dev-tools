@@ -1,0 +1,4 @@
+name: dino-park-dev-tools
+namespace: dino-park
+rev: latest
+env: dev
