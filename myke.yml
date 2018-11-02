@@ -4,6 +4,7 @@ discover:
   - ./external
   - ../dino-tree
   - ../dino-park-front-end
+  - ../dino-park-search
   - ../mozillians
   - ./git
   - ./k8s
