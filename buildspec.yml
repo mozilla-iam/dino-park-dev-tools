@@ -2,7 +2,6 @@ version: 0.2
 
 env:
   variables:
-    IMAGE_NAME: dino-park-front-end
     DOCKER_REGISTRY: 320464205386.dkr.ecr.us-west-2.amazonaws.com
 
 phases:
