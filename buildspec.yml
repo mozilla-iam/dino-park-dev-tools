@@ -35,5 +35,5 @@ phases:
   post_build:
     commands:
       - echo "Environment is ${DEPLOY_ENV}"
-      - '[ -n "$MASTER" ] && helm template -f k8s/values.yaml -f k8s/values/$DEPLOY_ENV.yaml --set docker_registry=$DOCKER_REGISTRY,namespace=dinopark-$DEPLOY_ENV,rev=$COMMIT_SHA k8s/ | kubectl --token $DEPLOY_TOKEN apply -f -'
+      - '[ -n "$MASTER" ] && cd external/elastic/ && helm template -f k8s/values.yaml -f k8s/values/$DEPLOY_ENV.yaml --set docker_registry=$DOCKER_REGISTRY,namespace=dinopark-$DEPLOY_ENV,rev=$COMMIT_SHA k8s/ | kubectl --token $DEPLOY_TOKEN apply -f - && cd ../..'
 
