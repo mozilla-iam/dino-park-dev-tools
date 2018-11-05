@@ -3,24 +3,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: elastic-deployment
-  namespace: dino-park
+  name: {{ .Values.name }}-deployment
+  namespace: {{ .Values.namespace }}
   labels:
-    app: elastic
+    app: {{ .Values.name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: elastic
+      app: {{ .Values.name }}
   template:
     metadata:
       labels:
-        app: elastic
+        app: {{ .Values.name }}
     spec:
       containers:
-        - name: elastic
+        - name: {{ .Values.name }}
           image: docker.elastic.co/elasticsearch/elasticsearch:6.4.1
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 9200
             - containerPort: 9300
