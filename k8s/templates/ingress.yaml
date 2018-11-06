@@ -4,7 +4,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: dino-park-ingress
-  namespace: dino-park
+  namespace: {{ .Values.namespace }}
 spec:
   rules:
   - host: dinopark.mozilla.community
