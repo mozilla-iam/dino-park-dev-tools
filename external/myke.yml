@@ -2,4 +2,4 @@ project: external
 desc: external services for DinoPark
 tasks:
   run-dev:
-    cmd: helm template -f ../k8s/values.yaml elastic/k8s/ | kubectl apply -f -
+    cmd: helm template -f elastic/k8s/values.yaml -f elastic/k8s/values/dev.yaml elastic/k8s/ | kubectl apply -f -
